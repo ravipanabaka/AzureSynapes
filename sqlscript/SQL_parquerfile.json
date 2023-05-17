@@ -1,0 +1,17 @@
+{
+	"name": "SQL_parquerfile",
+	"properties": {
+		"content": {
+			"query": "\nCREATE EXTERNAL DATA SOURCE LOG_DATA1 \nWITH (LOCATION='https://stgdl102.blob.core.windows.net/folder1/userdata1.parquet',\n    CREDENTIAL=SasToken)\n\n    CREATE DATABASE SCOPED CREDENTIAL SasToken \nWITH IDENTITY='SHARED ACCESS SIGNATURE'\n,SECRET='sv=2022-11-02&ss=bfqt&srt=sco&sp=rwdlacupyx&se=2023-05-17T18:47:24Z&st=2023-05-17T10:47:24Z&spr=https&sig=C%2BFd1BdPpbs2Uu5I5AXeGKcMLMR8EmsmLf53%2F%2FMiKGQ%3D'\n\n\nDROP external  SCOPED CREDENTIAL SasToken \n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "APPDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

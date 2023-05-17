@@ -1,0 +1,17 @@
+{
+	"name": "opernrowset",
+	"properties": {
+		"content": {
+			"query": "SELECT *FROM \nOPENROWSET(BULK 'https://stgdl102.blob.core.windows.net/folder1/userdata1.parquet',\nFORMAT='PARQUET') AS [USER_DATA_PARQUET] ",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
